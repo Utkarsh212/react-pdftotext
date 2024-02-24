@@ -1,6 +1,6 @@
 {
   "name": "react-pdftotext",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple light weight react package to extract plain text from a pdf file.",
   "main": "index.js",
   "scripts": {
