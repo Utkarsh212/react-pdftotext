@@ -16,7 +16,7 @@ npm install react-pdftotext
 Now add a input tag with type="file" to take file input.
 
 ```html
-<input type="file" accept="application/pdf" onClick={extractText}/>
+<input type="file" accept="application/pdf" onChange={extractText}/>
 ```
 
 Import the pdf2text function from package
