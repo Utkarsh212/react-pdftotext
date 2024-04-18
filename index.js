@@ -17,6 +17,7 @@ const pdfToText = async (file) => {
     const loadingTask = pdfjs.getDocument(blobUrl)
 
     let extractedText = ""
+    let hadParsingError = false
     try {
         const pdf = await loadingTask.promise
         const numPages = pdf.numPages
@@ -29,6 +30,7 @@ const pdfToText = async (file) => {
             extractedText += pageText
         }
     } catch (error) {
+        hadParsingError = true
         console.error("Error extracting text from PDF:", error)
     }
 
@@ -38,10 +40,8 @@ const pdfToText = async (file) => {
     // Free memory from loading task
     loadingTask.destroy()
     
-    if (extractedText.length > 0) {
+    if (!hadParsingError) {
         return extractedText
-    } else {
-        console.error("Error extracting text from PDF:", error)
     }
 }
 
