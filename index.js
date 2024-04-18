@@ -9,16 +9,17 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
  * @returns {Promise<string>} A promise that resolves with the extracted text content.
  */
 const pdfToText = async (file) => {
+
+    // Create a blob URL for the PDF file
+    const blobUrl = URL.createObjectURL(file)
+
+    // Load the PDF file
+    const loadingTask = pdfjs.getDocument(blobUrl)
+
+    let extractedText = ""
     try {
-        // Create a blob URL for the PDF file
-        const blobUrl = URL.createObjectURL(file)
-
-        // Load the PDF file
-        const loadingTask = pdfjs.getDocument(blobUrl)
-
         const pdf = await loadingTask.promise
         const numPages = pdf.numPages
-        let extractedText = ""
 
         // Iterate through each page and extract text
         for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
@@ -27,14 +28,19 @@ const pdfToText = async (file) => {
             const pageText = textContent.items.map((item) => item.str).join(" ")
             extractedText += pageText
         }
-        if (extractedText.length > 0) {
-            return extractedText
-        }
-        console.error("Error extracting text from PDF:", error)
-
-        // Clean up the blob URL
-        URL.revokeObjectURL(blobUrl)
     } catch (error) {
+        console.error("Error extracting text from PDF:", error)
+    }
+
+    // Clean up the blob URL
+    URL.revokeObjectURL(blobUrl)
+
+    // Free memory from loading task
+    loadingTask.destroy()
+    
+    if (extractedText.length > 0) {
+        return extractedText
+    } else {
         console.error("Error extracting text from PDF:", error)
     }
 }
