@@ -1,6 +1,6 @@
 # react-pdftotext
 
-Light-weight client library for extracting plain text from pdf files.
+Light-weight memory-safe client library for extracting plain text from pdf files.
 
 ## Installing
 
@@ -9,6 +9,7 @@ Using npm:
 ```js
 npm install react-pdftotext
 ```
+
 ## Example
 
 **Local File Input**
@@ -16,19 +17,19 @@ npm install react-pdftotext
 Now add a input tag with type="file" to take file input.
 
 ```html
-<input type="file" accept="application/pdf" onChange={extractText}/>
+<input type="file" accept="application/pdf" onChange="{extractText}" />
 ```
 
 Import the pdf2text function from package
 
 ```js
-import pdfToText from 'react-pdftotext'
+import pdfToText from "react-pdftotext";
 
 function extractText(event) {
-    const file = event.target.files[0]
-    pdfToText(file)
-        .then(text => console.log(text))
-        .catch(error => console.error("Failed to extract text from pdf"))
+  const file = event.target.files[0];
+  pdfToText(file)
+    .then((text) => console.log(text))
+    .catch((error) => console.error("Failed to extract text from pdf"));
 }
 ```
 
