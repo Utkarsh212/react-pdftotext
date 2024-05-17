@@ -1,0 +1,13 @@
+{
+  "files": ["index.js"],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+
+    // This matches the TypeScript target used by react-pdf:
+    // https://github.com/wojtekmaj/react-pdf/blob/main/packages/react-pdf/tsconfig.json
+    "target": "ES2015"
+  }
+}

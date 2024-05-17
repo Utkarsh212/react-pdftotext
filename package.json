@@ -4,9 +4,10 @@
   "description": "A simple light weight react package to extract plain text from a pdf file.",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel index.js -o dist/index.js",
+    "build": "babel index.js -o dist/index.js && tsc",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@babel/cli": "^7.24.1",
     "@babel/core": "^7.24.4",
-    "@babel/preset-env": "^7.24.4"
+    "@babel/preset-env": "^7.24.4",
+    "typescript": "^5.4.5"
   }
 }
