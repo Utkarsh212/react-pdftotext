@@ -1,10 +1,13 @@
 {
-  "files": ["index.js"],
+  "files": ["index.ts"],
   "compilerOptions": {
     "allowJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "outDir": "dist",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "NodeNext",
+    "skipLibCheck": true,
 
     // This matches the TypeScript target used by react-pdf:
     // https://github.com/wojtekmaj/react-pdf/blob/main/packages/react-pdf/tsconfig.json
