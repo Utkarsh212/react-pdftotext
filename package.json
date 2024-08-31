@@ -27,7 +27,7 @@
   "author": "Utkarsh Pancholi",
   "license": "ISC",
   "dependencies": {
-    "react-pdf": "^8.0.2"
+    "react-pdf": "^9.1.0"
   },
   "devDependencies": {
     "typescript": "^5.4.5"
