@@ -2,3 +2,4 @@ index.ts
 package-lock.json
 .gitignore
 tsconfig.json
+.github

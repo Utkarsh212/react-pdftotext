@@ -25,9 +25,10 @@
     "pdf-to-text"
   ],
   "author": "Utkarsh Pancholi",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "react-pdf": "^8.0.2"
+    "pdfjs-dist": "^4.6.82",
+    "react-pdf": "^9.1.0"
   },
   "devDependencies": {
     "typescript": "^5.4.5"
