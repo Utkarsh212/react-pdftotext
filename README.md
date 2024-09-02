@@ -7,7 +7,7 @@ Light-weight memory-safe client library for extracting plain text from pdf files
 Using npm:
 
 ```js
-npm install react-pdftotext
+npm install react-pdftotext-temppackage
 ```
 
 ## Example
@@ -23,7 +23,7 @@ Now add a input tag with type="file" to take file input.
 Import the pdf2text function from package
 
 ```js
-import pdfToText from "react-pdftotext";
+import pdfToText from "react-pdftotext-temppackage";
 
 function extractText(event) {
   const file = event.target.files[0];
@@ -38,7 +38,7 @@ function extractText(event) {
 For Pdf files stored at remote locations
 
 ```js
-import pdfToText from 'react-pdftotext'
+import pdfToText from 'react-pdftotext-temppackage'
 
 const pdf_url = "REMOTE_PDF_URL"
 
@@ -56,3 +56,4 @@ function extractText() {
 ## Contributing
 
 This project welcomes contributions and suggestions.
+This project was forked from react-pdftotext (https://www.npmjs.com/package/react-pdftotext). This is intended as a temporary bug patch.

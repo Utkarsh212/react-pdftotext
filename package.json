@@ -1,6 +1,6 @@
 {
-  "name": "react-pdftotext",
-  "version": "1.2.0",
+  "name": "react-pdftotext-temppackage",
+  "version": "1.0.5",
   "description": "A simple light weight react package to extract plain text from a pdf file.",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Utkarsh212/react-pdftotext.git"
+    "url": "https://github.com/derekGou/react-pdftotext.git"
   },
   "keywords": [
     "react-pdf",
@@ -24,9 +24,10 @@
     "pdfjs",
     "pdf-to-text"
   ],
-  "author": "Utkarsh Pancholi",
+  "author": "Derek Gou",
   "license": "ISC",
   "dependencies": {
+    "pdfjs-dist": "^4.6.82",
     "react-pdf": "^9.1.0"
   },
   "devDependencies": {
