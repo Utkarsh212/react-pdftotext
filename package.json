@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "pdfjs-dist": "^4.6.82",
-    "react-pdf": "^9.1.0"
+    "react-pdf": "^9.1.1"
   },
   "devDependencies": {
     "typescript": "^5.4.5"
