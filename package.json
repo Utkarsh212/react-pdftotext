@@ -1,6 +1,6 @@
 {
-  "name": "react-pdftotext",
-  "version": "1.3.4",
+  "name": "react-pdftotext-advanced",
+  "version": "1.3.5",
   "description": "A simple light weight react package to extract plain text from a pdf file.",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Utkarsh212/react-pdftotext.git"
+    "url": "https://github.com/JavierBagatoli/react-pdftotext.git"
   },
   "keywords": [
     "react-pdf",
@@ -22,9 +22,10 @@
     "react",
     "pdf2text",
     "pdfjs",
-    "pdf-to-text"
+    "pdf-to-text",
+    "typescript"
   ],
-  "author": "Utkarsh Pancholi",
+  "author": "Javier Bagatoli",
   "license": "MIT",
   "dependencies": {
     "pdfjs-dist": "^4.6.82",

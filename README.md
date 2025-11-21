@@ -1,13 +1,15 @@
-# react-pdftotext
+# react-pdftotext-advanced
 
-Light-weight memory-safe client library for extracting plain text from pdf files.
+This is a library based on "react-pdftotext" that aims to format text for readability without requiring extensive coding.
+
+This version separates paragraph and page endings, taking into account expected spacing and page breaks.
 
 ## Installing
 
 Using npm:
 
 ```js
-npm install react-pdftotext
+npm install react-pdftotext-advanced
 ```
 
 ## Example
@@ -22,35 +24,48 @@ Now add a input tag with type="file" to take file input.
 
 Import the pdf2text function from package
 
-```js
-import pdfToText from "react-pdftotext";
+```ts
+//simple mode
+//input Base text
+//Good morning everyone.
+//
+//How are you all?
+//
+//I hope you're well.
+import pdfToText from "react-pdftotext-advanced";
 
 function extractText(event) {
   const file = event.target.files[0];
-  pdfToText(file)
+  selectModeToExtract(file, 'simple')
     .then((text) => console.log(text))
     .catch((error) => console.error("Failed to extract text from pdf"));
 }
+//output Base text
+// Good morning everyone.How are you all?I hope you're well.
 ```
 
-**Remote PDF File Input**
+```ts
+//Advanced mode
+//input text
+//Good morning everyone.
+//
+//How are you all?
+//
+//I hope you're well.
+import pdfToText from "react-pdftotext-advanced";
 
-For Pdf files stored at remote locations
-
-```js
-import pdfToText from 'react-pdftotext'
-
-const pdf_url = "REMOTE_PDF_URL"
-
-function extractText() {
-    const file = await fetch(pdf_url)
-        .then(res => res.blob())
-        .catch(error => console.error(error))
-
-    pdfToText(file)
-        .then(text => console.log(text))
-        .catch(error => console.error("Failed to extract text from pdf"))
+function extractText(event) {
+  const file = event.target.files[0];
+  selectModeToExtract(file, 'simple')
+    .then((text) => console.log(text))
+    .catch((error) => console.error("Failed to extract text from pdf"));
 }
+//output text
+//Good morning everyone.
+//
+//How are you all?
+//
+//I hope you're well.
 ```
 
 ## Contributing
