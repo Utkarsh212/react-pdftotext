@@ -17,7 +17,7 @@ export function Navbar() {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => scrollToSection("home")}
         >
-          <img src="/lib_icon.png" alt="react-pdftotext logo" className="h-8 w-auto" />
+          <img src={`${import.meta.env.BASE_URL}lib_icon.png`} alt="react-pdftotext logo" className="h-8 w-auto" />
           <span className="font-bold text-lg hidden sm:inline-block">
             react-pdftotext
           </span>
