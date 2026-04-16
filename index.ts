@@ -1,7 +1,7 @@
 import { pdfjs } from "react-pdf";
 
 // Path to the pdf.worker.js file
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.mjs`;
 
 /**
  * Extracts text content from a PDF file.
