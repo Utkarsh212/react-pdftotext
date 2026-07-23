@@ -4,11 +4,12 @@
     "allowJs": true,
     "outDir": "dist",
     "isolatedModules": true,
-    "skipLibCheck": true,
     "target": "ES2020",         
     "module": "ESNext",         
     "declaration": true,        
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "Node",   
+    "skipLibCheck": true,
   },
   "include": ["src/**/*", "index.ts", "aux-funcitons.ts"] 
 }
