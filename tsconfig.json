@@ -2,16 +2,13 @@
   "files": ["index.ts"],
   "compilerOptions": {
     "allowJs": true,
-    "declaration": true,
     "outDir": "dist",
-    "esModuleInterop": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "module": "ESNext",         // Generará "export default" en vez de "exports.default"
-    "moduleResolution": "Node",
-    "target": "ES2020"
-
-    // This matches the TypeScript target used by react-pdf:
-    // https://github.com/wojtekmaj/react-pdf/blob/main/packages/react-pdf/tsconfig.json
-  }
+    "target": "ES2020",         
+    "module": "ESNext",         
+    "declaration": true,        
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*", "index.ts", "aux-funcitons.ts"] 
 }
