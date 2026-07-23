@@ -26,7 +26,7 @@ Import the pdf2text function from package
 
 ```ts
 //simple mode
-//input Base text
+//input text
 //Good morning everyone.
 //
 //How are you all?
@@ -40,7 +40,7 @@ function extractText(event) {
     .then((text) => console.log(text))
     .catch((error) => console.error("Failed to extract text from pdf"));
 }
-//output Base text
+//output
 // Good morning everyone.How are you all?I hope you're well.
 ```
 
@@ -56,11 +56,11 @@ import pdfToText from "react-pdftotext-advanced";
 
 function extractText(event) {
   const file = event.target.files[0];
-  selectModeToExtract(file, 'simple')
+  selectModeToExtract(file, 'advanced')
     .then((text) => console.log(text))
     .catch((error) => console.error("Failed to extract text from pdf"));
 }
-//output text
+//output
 //Good morning everyone.
 //
 //How are you all?
