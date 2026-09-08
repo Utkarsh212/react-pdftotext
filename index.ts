@@ -19,6 +19,7 @@ const pdfToText = async (file: File | Blob | MediaSource): Promise<string> => {
   try {
     const pdf = await loadingTask.promise;
     const numPages = pdf.numPages;
+    const pageTexts: string[] = [];
 
     // Iterate through each page and extract text
     for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
@@ -27,8 +28,11 @@ const pdfToText = async (file: File | Blob | MediaSource): Promise<string> => {
       const pageText = textContent.items
         .map((item) => ("str" in item ? item.str : ""))
         .join(" ");
-      extractedText += pageText;
+      pageTexts.push(pageText);
     }
+
+    // Join pages with a space, skipping pages that yielded no text
+    extractedText = pageTexts.filter((text) => text.trim() !== "").join(" ");
   } catch (error) {
     throw new Error(`Failed to extract text from PDF: ${error}`);
   } finally {
